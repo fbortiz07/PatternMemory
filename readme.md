@@ -1,55 +1,23 @@
-# Actividad Pattern Memory Oscar Calderon
+# Ultima Actividad Primer Corte: Pattern Memory 
 
-Desarrollado con ES6 y jquery.
+El juego esta compuesto por cuatro partes: estilos, index, script y logica
 
-El juego presenta cuadros marcados de azul oscuro sobre un tablero, luego de un determinado tiempo se desaparecen y el jugador debe seleccionar los recuadros marcados previamante, si se selecciona todos los recuadros, el jugador ganará.
+#Estilos
+En este archivo maneje css para darle estetica a cada uno de los elementos que componen el juego para darle un buen aspecto, de modo que cree un estilo especifco para el boton reiniciar, tambien estan los diseños de la matriz y los cuadros sobre los que se desarrolla el juego
 
-# Proceso de desarrollo
+#index
+Basicamente es la pagina html mediante la cual se ejecutan los estilos y los escripts correspondientes al juego.
 
-Instalación de NodeJS y de browserify y watchify globalmente.
+#Script y Logica
+En estos archivos loq eu hice fue crear las correspondientes validaciones tanto para dibujar la matriz como para saber a que elemento o cuadro del juego se le esta haciendo click, en estos archivos se encuentran funciones como:
+creacuadro
+comprobar
+puntuacion
+ y la funcion basica para que cada vez que se oprima el boton se reinicie el juego a conformidad del usuario:
 
-```
-npm install -g browserify
-npm install -g watchify
-```
+    $('#Boton').click(function () {
+        location.reload();
+    });
 
-Instalación de los paquetes de desarrollo localmente que están ubicados en el archivo package.json
-
-```
-npm install
-```
-
-# Funciones.
-
-### El juego emplea las siguientes funciones:
-
-* CreaTablero: se ejecuta cuando la pagina carga por completo por medio de la siguiente función de jquery:
-```
-$( document ).ready(function() {
-    //ejecuta la creación del tablero
-    CreaTablero(3);
-});
-```
- Esta función permite por medio de ciclos se generar un tablero de 4x4, se añade listener "click" a cada elemento del tablero y se imprime en una division del HTML llamada tablero.
-
-* MarcarPuntos: Una vez creado el tablero, se marcan 3 puntos aleatorios dentro del tablero cambiando el fondo de azul claro a azul oscuro
-
-* OcultarPuntos: Despues de marcar puntos aleatorios, estos se ocultan ofreciendo tiempo suficiente al jugador para memorizarlos.
-
-* validarPunto: Se ejecuta cuando el jugador hace clic en un elemento del tablero e identifica cuando un elemento es correcto marcandolo con azul oscuro, de lo contrario, lo marca con color rojo. Si se selecciona 3 veces un elemento correcto el jugador ganará el juego.
-
-# Interfaz Gráfica
-
-Creada con html se compone de 3 secciones:
-
-* Título: ubicado en la parte superior central de la ventana
-* Botón de reinicio: Ubicado en la parte izquierda de la pantalla, se le ha añadido un evento click que recarga la pagina en su totalidad por medio del siguiente código desde javascript (usando jquery):
-```
-$('#Reiniciar').click(function()
-{
-    location.reload();
-});
-```
-* División de tablero: donde se imprime el tablero para jugar
-
-
+##Desarrollado con ES6 y Jquery
+###William Fabian Ortiz Mahecha 461213125
