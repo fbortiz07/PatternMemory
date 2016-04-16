@@ -33,7 +33,7 @@ function Creacuadro(Aux) {
             };
 
             if (Aux2 == Aux) {
-                alert("Felicitaciones\n El juego será reiniciado");
+                alert("Felicitaciones ha ganado");
                 location.reload();
             };
         });
