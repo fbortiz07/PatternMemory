@@ -1,0 +1,69 @@
+html, body {
+    height: 100%;
+}
+
+#cuadro
+{
+    position: absolute;
+    border: solid black 5px ;
+    border-radius: 5%;
+    margin-top: 3%;
+    margin-left: 30%;
+    left: 5%;
+    width: 30%;
+    height: 50%;
+}
+
+
+
+.Hace_click
+{
+    background-color: green;
+    /*background-image: url(../imagenes/done.png);*/
+}
+
+.error
+{
+    /*background-color: black;*/
+    background-image: url(../imagenes/eliminar.png);
+}
+
+
+#Boton
+{
+
+  position: absolute;
+  width: 20%;
+height: 70px;
+left: 40%; /*(100%-60%)/2*/
+top:80% ;
+  background: yellow;
+border-radius: 10px;
+font-family: Arial;
+color: red);
+font-size: 19px;
+padding: 9px 20px 10px 20px;
+border: solid #fcfcfc 3px;
+text-decoration: none;;
+
+}
+table
+{
+    width: 100%;
+    height: 100%;
+}
+
+tr
+{
+    width: 25%;
+    height: 25%;
+}
+
+td
+{
+    width: 25%;
+    height: 25%;
+    padding: 1%;
+    background-color: blue;
+    cursor: pointer;
+}
